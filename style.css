@@ -1,3 +1,8 @@
+/* 
+Child combinator '>' selects elements one level of depth below. 
+This is why main > div only selects children and not children and grand children.
+*/
+
 main div {
     /* all divs in main selected */
 }
@@ -11,7 +16,32 @@ main > div > div {
 }
 
 /* 
-Child combinator '>' selects elements one level of depth below. 
-This is why main > div only selects children and not children and grand children.
+The adjacent sibling combinator '+' selects an adjacent sibling element,
+(sibling meaning on the same level of depth.)
 */
 
+.group1 + div {
+    /* selects <div class="child group2"> in this case */
+}
+
+.group1 + div + div {
+    /* selects <div class="grand-child group3"></div> in this case */
+}
+
+/* 
+The general sibling combinator '~' selects all siblings after the specified elements:
+*/
+
+.group1 ~ div {
+    /* should select both the group 2 and group 3 divs */
+}
+
+/* 
+Pseudo Classes begin with a single colon : and act as if the class was actually there in the html.
+Examples include: :hover, :first-child and :invalid (might be useful for form project.
+ */
+
+/* 
+Pseudo Elements begin with a double colon :: and act as if the element was actually there in the html.
+Examples include: ::first-line, ::before, ::after
+*/
