@@ -1,0 +1,17 @@
+main div {
+    /* all divs in main selected */
+}
+
+main > div {
+    /* selects all children of main of type div */
+}
+
+main > div > div {
+    /* selects all grandchildren of main of type div */
+}
+
+/* 
+Child combinator '>' selects elements one level of depth below. 
+This is why main > div only selects children and not children and grand children.
+*/
+
