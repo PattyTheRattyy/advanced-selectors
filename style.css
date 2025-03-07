@@ -45,3 +45,20 @@ Examples include: :hover, :first-child and :invalid (might be useful for form pr
 Pseudo Elements begin with a double colon :: and act as if the element was actually there in the html.
 Examples include: ::first-line, ::before, ::after
 */
+
+/* 
+Attribute Selectors
+
+[src] - any element with a src attribute
+
+img[src="puppy.jpg"] - any img with a src attribute == "puppy.jpg"
+
+You can also use ^= $= *= kind of like regular expressions:
+
+^= starts with
+
+$= ends with
+
+*= contains
+
+*/
